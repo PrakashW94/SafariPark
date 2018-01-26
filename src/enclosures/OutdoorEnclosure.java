@@ -11,7 +11,6 @@ public class OutdoorEnclosure extends Enclosures
 {
 	private static final Habitats HABITAT = Habitats.INDOOR;
 	private OutdoorEnclosureTypes enclosureType;
-	private EnclosureSizes enclosureSize;
 	
 	public OutdoorEnclosure(String name, String desc, EnclosureSizes size, LocalDate firstOpened,
 			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity,
@@ -19,7 +18,6 @@ public class OutdoorEnclosure extends Enclosures
 	{
 		super(name, desc, HABITAT, size, firstOpened, openingTime, closingTime, maxAnimalCapacity, maxVisitorCapacity);
 		this.enclosureType = enclosureType;
-		this.enclosureSize = enclosureSize;
 	}
 
 	public OutdoorEnclosureTypes getEnclosureType()
@@ -32,19 +30,9 @@ public class OutdoorEnclosure extends Enclosures
 		this.enclosureType = enclosureType;
 	}
 
-	public static Habitats getHabitat()
+	public Habitats getHabitat()
 	{
 		return HABITAT;
-	}
-
-	public EnclosureSizes getEnclosureSize()
-	{
-		return enclosureSize;
-	}
-
-	public void setEnclosureSize(EnclosureSizes enclosureSize)
-	{
-		this.enclosureSize = enclosureSize;
 	}
 	
 }

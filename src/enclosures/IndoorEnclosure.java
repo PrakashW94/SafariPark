@@ -11,7 +11,6 @@ public class IndoorEnclosure extends Enclosures
 {
 	private static final Habitats HABITAT = Habitats.INDOOR;
 	private IndoorEnclosureTypes enclosureType;
-	private EnclosureSizes enclosureSize;
 
 	public IndoorEnclosure(String name, String desc, EnclosureSizes size, LocalDate firstOpened,
 			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity,
@@ -19,7 +18,6 @@ public class IndoorEnclosure extends Enclosures
 	{
 		super(name, desc, HABITAT, size, firstOpened, openingTime, closingTime, maxAnimalCapacity, maxVisitorCapacity);
 		this.enclosureType = enclosureType;
-		this.setEnclosureSize(enclosureSize);
 	}
 	
 	public IndoorEnclosureTypes getEnclosureType()
@@ -32,18 +30,8 @@ public class IndoorEnclosure extends Enclosures
 		this.enclosureType = enclosureType;
 	}
 
-	public static Habitats getHabitat()
+	public Habitats getHabitat()
 	{
 		return HABITAT;
-	}
-
-	public EnclosureSizes getEnclosureSize()
-	{
-		return enclosureSize;
-	}
-
-	public void setEnclosureSize(EnclosureSizes enclosureSize)
-	{
-		this.enclosureSize = enclosureSize;
 	}
 }
