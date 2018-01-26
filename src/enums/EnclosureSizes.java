@@ -1,6 +1,6 @@
 package enums;
 
-public enum Sizes
+public enum EnclosureSizes
 {
 	SMALL,
 	MEDIUM,

@@ -2,6 +2,7 @@ package animals;
 
 import java.time.LocalTime;
 
+import enums.Gender;
 import enums.Habitats;
 import interfaces.AnimalInterface;
 
@@ -9,6 +10,7 @@ public abstract class Animals implements AnimalInterface
 {
 	private String name;
 	private int age;
+	private Gender gender;
 	private String desc;
 	private String diet;
 	
@@ -20,11 +22,12 @@ public abstract class Animals implements AnimalInterface
 	private LocalTime activeFrom;
 	private LocalTime activeUntil;
 	
-	public Animals(String name, int age, String desc, String diet, String voice, String action, Habitats habitat,
-			LocalTime activeFrom, LocalTime activeUntil)
+	public Animals(String name, int age, Gender gender, String desc, String diet, String voice, String action,
+			Habitats habitat, LocalTime activeFrom, LocalTime activeUntil)
 	{
 		this.name = name;
 		this.age = age;
+		this.gender = gender;
 		this.desc = desc;
 		this.diet = diet;
 		this.voice = voice;
@@ -74,9 +77,9 @@ public abstract class Animals implements AnimalInterface
 		this.diet = diet;
 	}
 
-	public String getVoice()
+	public void talk()
 	{
-		return voice;
+		System.out.println(voice);;
 	}
 
 	public void setVoice(String voice)
@@ -84,9 +87,9 @@ public abstract class Animals implements AnimalInterface
 		this.voice = voice;
 	}
 
-	public String getAction()
+	public void doAction()
 	{
-		return action;
+		System.out.println(this.action);
 	}
 
 	public void setAction(String action)
@@ -122,6 +125,16 @@ public abstract class Animals implements AnimalInterface
 	public void setActiveUntil(LocalTime activeUntil)
 	{
 		this.activeUntil = activeUntil;
+	}
+
+	public Gender getGender()
+	{
+		return gender;
+	}
+
+	public void setGender(Gender gender)
+	{
+		this.gender = gender;
 	}
 	
 }

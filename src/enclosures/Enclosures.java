@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import enums.Habitats;
-import enums.Sizes;
+import enums.EnclosureSizes;
 import interfaces.EnclosureInterface;
 
 public abstract class Enclosures implements EnclosureInterface
@@ -12,7 +12,7 @@ public abstract class Enclosures implements EnclosureInterface
 	private String name;
 	private String desc;
 	private Habitats habitat;
-	private Sizes size;
+	private EnclosureSizes size;
 	private LocalDate firstOpened;
 	private LocalTime openingTime;
 	private LocalTime closingTime;
@@ -23,7 +23,7 @@ public abstract class Enclosures implements EnclosureInterface
 	private int maxAnimalCapacity;
 	private int maxVisitorCapacity;
 	
-	public Enclosures(String name, String desc, Habitats habitat, Sizes size, LocalDate firstOpened,
+	public Enclosures(String name, String desc, Habitats habitat, EnclosureSizes size, LocalDate firstOpened,
 			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity)
 	{
 		this.name = name;
