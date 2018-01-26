@@ -8,6 +8,9 @@ import interfaces.AnimalInterface;
 
 public abstract class Animals implements AnimalInterface
 {
+	private static int idCounter = 1000;
+	
+	private int id;
 	private String name;
 	private int age;
 	private Gender gender;
@@ -25,6 +28,7 @@ public abstract class Animals implements AnimalInterface
 	public Animals(String name, int age, Gender gender, String desc, String diet, String voice, String action,
 			Habitats habitat, LocalTime activeFrom, LocalTime activeUntil)
 	{
+		this.id = idCounter;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
@@ -35,6 +39,7 @@ public abstract class Animals implements AnimalInterface
 		this.habitat = habitat;
 		this.activeFrom = activeFrom;
 		this.activeUntil = activeUntil;
+		idCounter++;
 	}
 
 	public String getName()
@@ -136,5 +141,9 @@ public abstract class Animals implements AnimalInterface
 	{
 		this.gender = gender;
 	}
-	
+
+	public int getId()
+	{
+		return id;
+	}	
 }
