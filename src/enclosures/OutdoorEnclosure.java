@@ -28,11 +28,5 @@ public class OutdoorEnclosure extends Enclosures
 	public void setEnclosureType(OutdoorEnclosureTypes enclosureType)
 	{
 		this.enclosureType = enclosureType;
-	}
-
-	public Habitats getHabitat()
-	{
-		return HABITAT;
-	}
-	
+	}	
 }

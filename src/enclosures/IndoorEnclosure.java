@@ -28,9 +28,4 @@ public class IndoorEnclosure extends Enclosures
 	{
 		this.enclosureType = enclosureType;
 	}
-
-	public Habitats getHabitat()
-	{
-		return HABITAT;
-	}
 }
