@@ -14,7 +14,7 @@ public class OutdoorEnclosure extends Enclosures
 	
 	public OutdoorEnclosure(String name, String desc, EnclosureSizes size, LocalDate firstOpened,
 			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity,
-			OutdoorEnclosureTypes enclosureType, EnclosureSizes enclosureSize)
+			OutdoorEnclosureTypes enclosureType)
 	{
 		super(name, desc, HABITAT, size, firstOpened, openingTime, closingTime, maxAnimalCapacity, maxVisitorCapacity);
 		this.enclosureType = enclosureType;

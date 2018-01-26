@@ -12,9 +12,8 @@ public class IndoorEnclosure extends Enclosures
 	private static final Habitats HABITAT = Habitats.INDOOR;
 	private IndoorEnclosureTypes enclosureType;
 
-	public IndoorEnclosure(String name, String desc, EnclosureSizes size, LocalDate firstOpened,
-			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity,
-			IndoorEnclosureTypes enclosureType, EnclosureSizes enclosureSize)
+	public IndoorEnclosure(String name, String desc, Habitats habitat, EnclosureSizes size, LocalDate firstOpened,
+			LocalTime openingTime, LocalTime closingTime, int maxAnimalCapacity, int maxVisitorCapacity, IndoorEnclosureTypes enclosureType)
 	{
 		super(name, desc, HABITAT, size, firstOpened, openingTime, closingTime, maxAnimalCapacity, maxVisitorCapacity);
 		this.enclosureType = enclosureType;
