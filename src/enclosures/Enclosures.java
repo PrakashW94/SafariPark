@@ -17,8 +17,8 @@ public abstract class Enclosures implements EnclosureInterface
 	private LocalTime openingTime;
 	private LocalTime closingTime;
 	
-	boolean dirty = false;
-	boolean open;
+	private boolean dirty = false;
+	private boolean open;
 	
 	private int maxAnimalCapacity;
 	private int maxVisitorCapacity;
